@@ -23,3 +23,6 @@ Implementation Steps:
 Challenges & Troubleshooting: 
   Problem: Installed the server core instead of the desktop experience for windows 2022 server
   Solution: Wiped the VM and reinstalled with Unattended Guest Installation turned off
+
+  Problem: Configured scope of new DHCP server to 192.168.10.100-192.168.10.244 when my active directory/dns server sits on 192.168.15
+  Solution: Deleted the scope and created new with matching ip
