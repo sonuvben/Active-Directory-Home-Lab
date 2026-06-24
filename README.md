@@ -24,5 +24,12 @@ Challenges & Troubleshooting:
   Problem: Installed the server core instead of the desktop experience for windows 2022 server
   Solution: Wiped the VM and reinstalled with Unattended Guest Installation turned off
 
+  6/24
   Problem: Configured scope of new DHCP server to 192.168.10.100-192.168.10.244 when my active directory/dns server sits on 192.168.15
   Solution: Deleted the scope and created new with matching ip
+
+  Problem: DNS server would not start, waiting for initial sync signal from AD DS
+  Solution: added register key Repl Perform Initial Synchronizations to tell AD DS normal sync not necessary
+
+  Problem: New client vm isolated from domain controller
+  Solution: used ipconfig to check ip address, switched network mode to internal network with same name, used ipconfig /release and ipconfig /renew to obtain new addr
